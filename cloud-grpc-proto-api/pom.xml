@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.ryan.demo.cloud.grpc.proto.api</groupId>
 	<artifactId>cloud-grpc-proto-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>cloud-grpc-proto-api</name>
 	<description>cloud-grpc-proto-api</description>
 	<properties>
