@@ -1,0 +1,14 @@
+server:
+  port: 1010
+  servlet:
+    context-path: /cloud-grpc-client
+
+spring:
+  application:
+    name: cloud-grpc-client-a
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+
