@@ -17,6 +17,12 @@
 	</properties>
 	<dependencies>
 
+		<dependency>
+			<groupId>com.ryan.benchmark.core</groupId>
+			<artifactId>ryan-benchmark-core</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+
 		<!--引入proto api-->
 		<dependency>
 			<groupId>com.ryan.demo.cloud.grpc.proto.api</groupId>
@@ -50,11 +56,16 @@
 			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
 		</dependency>
 
-
 		<dependency>
 			<groupId>pro.fessional</groupId>
 			<artifactId>kaptcha</artifactId>
 			<version>2.3.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>

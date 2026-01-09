@@ -16,16 +16,9 @@ import java.util.List;
  * @Date 2026/1/9 09:13
  * @Version 1.0
  **/
-import com.alibaba.nacos.api.naming.NamingService;
-import com.alibaba.nacos.api.naming.pojo.Instance;
-import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
-import org.springframework.stereotype.Component;
-
-import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-@Component
+//@Component
 public class GrpcChannelFactory {
 
     private final NamingService namingService;

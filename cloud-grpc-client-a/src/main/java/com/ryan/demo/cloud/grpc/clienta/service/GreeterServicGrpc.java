@@ -10,7 +10,6 @@ package com.ryan.demo.cloud.grpc.clienta.service;
 import com.ryan.demo.cloud.grpc.GreeterServiceGrpc;
 import com.ryan.demo.cloud.grpc.HelloReply;
 import com.ryan.demo.cloud.grpc.HelloRequest;
-import com.ryan.demo.cloud.grpc.clienta.configuration.GrpcChannelFactory;
 import io.grpc.ManagedChannel;
 import org.springframework.stereotype.Service;
 
@@ -25,8 +24,7 @@ public class GreeterServicGrpc {
 
     public String sayHello(String name) throws Exception {
         ManagedChannel channel =
-                factory.createChannel("cloud-grpc-server-a");
-
+                factory.getChannel("cloud-grpc-server-a");
         GreeterServiceGrpc.GreeterServiceBlockingStub stub =
                 GreeterServiceGrpc.newBlockingStub(channel);
 
