@@ -1,0 +1,21 @@
+server:
+  port: 1008
+  servlet:
+    context-path: /cloud-http2-client
+
+spring:
+  application:
+    name: cloud-http2-client
+  cloud:
+    loadbalancer:
+      use-ssl: true
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+

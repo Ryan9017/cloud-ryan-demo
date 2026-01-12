@@ -1,9 +1,9 @@
-package com.ryan.demo.cloud.clienta.controller;
+package com.ryan.demo.cloud.http2.nonacos.client.controller;
 
 import com.ryan.benchmark.core.api.BenchmarkRequest;
 import com.ryan.benchmark.core.api.BenchmarkRunner;
-import com.ryan.demo.cloud.clienta.dto.UserBDTO;
-import com.ryan.demo.cloud.clienta.feign.UserFeignClient;
+import com.ryan.demo.cloud.http2.nonacos.client.dto.UserBDTO;
+import com.ryan.demo.cloud.http2.nonacos.client.feign.UserFeignClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,23 +29,27 @@ public class BenchmarkController {
         try {
             BenchmarkRunner.run(
                     new BenchmarkRequest(
-                            "cloud-http",
-                            "Cloud HTTP 本地性能测试",
+                            "cloud-http2",
+                            "Cloud HTTP2 本地性能测试",
                             100,
                             10_000,
                             1
                     ),
                     () ->
                     {
-                        UserBDTO userById = userFeignClient.getUserById(1L);
-                        System.out.println("-----"+userById.getName());
+                        try {
+                            UserBDTO userById = userFeignClient.getUserById(1L);
+//                            log.info("------{}",userById.getName());
+                        }catch (Exception e){
+                            log.error("error msg: {}",e.getMessage());
+                        }
                     }
             );
         } catch (Exception e) {
             log.error("e:{}",e);
-            return "Cloud HTTP benchmark has error!";
+            return "Cloud HTTP2 benchmark has error!";
         }
-        return "Cloud HTTP benchmark success!";
+        return "Cloud HTTP2 benchmark success!";
 
     }
 
