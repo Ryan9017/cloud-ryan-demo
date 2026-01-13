@@ -22,7 +22,7 @@ public class UserController {
     @GetMapping("/{id}")
     public UserBDTO getUserById(@PathVariable("id") Long id) {
         UserBDTO userBDTO = new UserBDTO(id, "provider-user-" + id);
-        log.info("-----");
+//        log.info("-----");
         return userBDTO;
     }
 }

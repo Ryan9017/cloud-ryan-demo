@@ -2,7 +2,7 @@ package com.ryan.demo.cloud.http2.nonacos.client.configuration;
 
 /**
  * @ClassName OkHttpConfig
- * @Description TODO
+ * @Description 1。使用cloud-h2（HTTP/2 over TLS）
  * @Author ryan
  * @Date 2026/1/12 13:19
  * @Version 1.0
@@ -22,10 +22,10 @@ import java.security.cert.X509Certificate;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-@Configuration
-public class OkHttpConfig {
+//@Configuration
+public class OkHttpConfigHttps {
 
-    @Bean
+//    @Bean
     public OkHttpClient rawOkHttpClient() {
         try {
             TrustManager[] trustAllCerts = new TrustManager[]{

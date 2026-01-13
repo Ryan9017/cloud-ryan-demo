@@ -1,5 +1,5 @@
 server:
-  port: 1009
+  port: 1019
   #1。使用cloud-h2（HTTP/2 over TLS）
 #  ssl:
 #    enabled: true
